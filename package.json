@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "SPA to present me to web-world",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Samarit/portfolio.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "react"
+  ],
+  "author": "AlekseyKislyak <kislyakaleksey@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Samarit/portfolio/issues"
+  },
+  "homepage": "https://github.com/Samarit/portfolio#readme"
+}
