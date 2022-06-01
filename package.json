@@ -2,9 +2,12 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "SPA to present me to web-world",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
   "repository": {
     "type": "git",
@@ -21,5 +24,14 @@
   "bugs": {
     "url": "https://github.com/Samarit/portfolio/issues"
   },
-  "homepage": "https://github.com/Samarit/portfolio#readme"
+  "homepage": "https://github.com/Samarit/portfolio#readme",
+  "dependencies": {
+    "concurrently": "^7.1.0",
+    "create-react-app": "^5.0.1",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.3.0"
+  }
 }
