@@ -10,12 +10,17 @@ export default function Navbar() {
     <div className="navbar-wrapper">
       <nav className={ isExpanded ? "navbar expanded" : "navbar"}>
 
+        <div className="navbar-logo">
+          <Link to={'/'} onClick={() => { setIsExpanded(false) }}>
+            <div id="logo"></div>
+          </Link>
+        </div>
+
         <div 
+          className="navbar-toggle"
           onClick={() => {
             setIsExpanded(!isExpanded)
-          }}
-          className="navbar-toggle"
-          >
+          }}>
             <div 
               id="hamburger"
               className={ isExpanded ? "open" : undefined }>

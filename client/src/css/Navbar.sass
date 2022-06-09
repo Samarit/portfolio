@@ -3,6 +3,8 @@ $hamburger-width: 2.5rem
 $hamburger-height: 2.5rem
 $hamburger-span-width: 50%
 $hamburger-span-height: 5px
+$logo-width: 3rem
+$logo-height: 3rem
 
 .navbar-wrapper
   position: fixed
@@ -16,7 +18,22 @@ $hamburger-span-height: 5px
   display: flex
   flex-direction: column
   justify-content: center
-  background-color: rgb(52,62,64)
+  align-items: start
+  width: 100%
+  height: 4rem
+
+.navbar-logo
+  width: $logo-width
+  height: $logo-height
+  //margin-bottom: 5rem
+
+  // div with svg background
+  #logo
+    width: $logo-width
+    height: $logo-height
+    background-position: center
+    background-size: contain
+    background-image: url('../icons/logo.svg')
 
 .navbar-toggle
   position: absolute
@@ -28,23 +45,31 @@ $hamburger-span-height: 5px
   display: none
   flex-direction: column
   justify-content: center
+  width: calc( 100% - 2rem )
 
   li
     display: flex
     justify-content: center
     height: 3rem
-    margin: 5px 0
-    border: 1px solid green
+    transition: 0.5s ease-out
 
-    a
-      text-align: center
-      line-height: 3
-      color: white
-      text-decoration: none
+    &:hover
+      background-color: #0c810c
+
+    &:not(:last-child)
+      border-bottom: 1px solid gray
+
+  a
+    text-align: center
+    line-height: 3
+    color: white
+    text-decoration: none
 
 .navbar.expanded
+  align-items: center
   height: 100vh
   width: 100%
+  background-color: rgb(52,62,64)
 
   .navbar-menu
     display: flex

@@ -1,7 +1,10 @@
+import routes from "../routes"
 
-export default function MainPage(initialView) {
+export default function MainPage() {
   
   return (
-      <h1>MAIN</h1>
+        <div className="page">
+          <h1>MAIN</h1>
+        </div>
   )
 }
