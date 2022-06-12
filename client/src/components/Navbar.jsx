@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { NavbarExpand } from "../App";
 import routes from "../routes";
 
 export default function Navbar() {
 
-  const [isExpanded, setIsExpanded] = useState(false)
+  const [isExpanded, setIsExpanded] = useContext(NavbarExpand)
 
   return (
     <div className="navbar-wrapper">
