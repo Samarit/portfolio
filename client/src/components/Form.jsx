@@ -1,5 +1,6 @@
 import '../css/Form.sass'
 import { useForm } from 'react-hook-form'
+import { useEffect } from 'react'
 
 const formSend = async (url, method) => {
   const res = await fetch( url, {method: method})
@@ -7,8 +8,10 @@ const formSend = async (url, method) => {
   console.log(data)
 }
 
+
+
 const formSubmit = (e) => {
-  e.preventDefault()
+  //e.preventDefault()
   formSend( '/api/sendmail', 'POST')
 }
 
@@ -22,7 +25,7 @@ export default function Form() {
 
   const onSubmit = (data) => {
     console.log(data)
-    console.log(errors)
+    console.log(`Errors: ${errors}`)
   }
 
   return (
@@ -32,12 +35,12 @@ export default function Form() {
         
         <div className="form-header">Send me a message</div>
         
-        <input {...register('email', {required: true})} name="email" id="emailInout" placeholder='Email' />
-        {errors.email && <p>This field is required</p>}
-        <input {...register('name')} name="name" id="nameInput" placeholder='Name'/>
+        <input {...register('email', {required: '⚠This field is required'})} name="email" id="emailInout" placeholder='Email' />
+        {errors.email && <p className='form-error-message'>{errors.email.message}</p>}
+        <input {...register('name') } name="name" id="nameInput" placeholder='Name'/>
         <input {...register('message')} name="message" id="messageInput" placeholder='Message...'/>
 
-        <button type="submit" >submit</button>
+        <button type="submit" onClick={console.log(errors)}>submit</button>
 
       </form>
     </div>

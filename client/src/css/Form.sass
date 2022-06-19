@@ -1,15 +1,17 @@
+$span-height: 1rem
+
 form
   display: flex
   flex-direction: column
   background-color: black
 
   input
+    width: 100%
+    height: calc( 1.5rem + $span-height )
     background-color: black
     border: 2px solid green
     margin-bottom: 0.25rem
     color: lime
-
-    &:-web
 
     &::placeholder
       color: green
