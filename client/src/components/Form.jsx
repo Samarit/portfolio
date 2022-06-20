@@ -1,19 +1,19 @@
 import '../css/Form.sass'
 import { useForm } from 'react-hook-form'
-import { useEffect } from 'react'
 
-const formSend = async (url, method) => {
-  const res = await fetch( url, {method: method})
-  const data = await res.json()
-  console.log(data)
+const formSend = async (url, options) => {
+  const res = await fetch( url, {
+    method: options.method, 
+    body: JSON.stringify(options.body),
+    headers: {
+      'Content-Type': 'application/json;charset=utf-8' 
+    }
+  })
+  const respond = await res.json()
+  console.log(respond)
 }
 
 
-
-const formSubmit = (e) => {
-  //e.preventDefault()
-  formSend( '/api/sendmail', 'POST')
-}
 
 export default function Form() {
 
@@ -26,21 +26,40 @@ export default function Form() {
   const onSubmit = (data) => {
     console.log(data)
     console.log(`Errors: ${errors}`)
+    formSend( '/api/sendmail', {
+      method: 'POST',
+      body: data
+    })  
   }
 
   return (
     <div className="form-container">
-
       <form onSubmit={ handleSubmit(onSubmit) }>
         
         <div className="form-header">Send me a message</div>
         
-        <input {...register('email', {required: '⚠This field is required'})} name="email" id="emailInout" placeholder='Email' />
-        {errors.email && <p className='form-error-message'>{errors.email.message}</p>}
-        <input {...register('name') } name="name" id="nameInput" placeholder='Name'/>
-        <input {...register('message')} name="message" id="messageInput" placeholder='Message...'/>
+        <input {...register('name', {required: 'This field is required'}) } name="name" id="nameInput" placeholder='Name'/>
+        {errors.name && <p className='form-error'>{errors.name.message}</p>}
 
-        <button type="submit" onClick={console.log(errors)}>submit</button>
+        <input {...register('email', 
+                  {required: 'This field is required',
+                   pattern: {
+                    value: /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                    message: 'Incorrect email'
+                }})} 
+          name="email" 
+          id="emailInout" 
+          placeholder='Email' />
+        {errors.email && <p className='form-error'>{errors.email.message}</p>}
+
+        <input {...register('text', 
+                {required: 'Type something!'})} 
+          name="text" 
+          id="textInput" 
+          placeholder='Message...'/>
+        {errors.text && <p className='form-error'>{errors.text.message}</p>}
+
+        <input type="submit" value={'Send'} />
 
       </form>
     </div>

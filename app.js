@@ -6,8 +6,11 @@ app.listen(PORT, () => {
   console.log('Server has been started...')
 })
 
+app.use(express.json())
+
 app.post('/api/sendmail', (req, res) => {
-  console.log(`${req.url}, ${req.method}, ${req.ip}`)
-  res.send({res: 'privet'})
+  console.log(`${req.url}, ${req.method}`)
+  console.log(req.body)
+  res.send(req.body)
 })
 
