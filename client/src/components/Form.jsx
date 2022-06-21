@@ -41,19 +41,21 @@ export default function Form() {
         <input {...register('name', {required: 'This field is required'}) } name="name" id="nameInput" placeholder='Name'/>
         {errors.name && <p className='form-error'>{errors.name.message}</p>}
 
-        <input {...register('email', 
-                  {required: 'This field is required',
-                   pattern: {
-                    value: /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                    message: 'Incorrect email'
-                }})} 
+        <input 
+          {...register('email', 
+            {required: 'This field is required',
+              pattern: {
+              value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+              message: 'Incorrect email'
+          }})} 
           name="email" 
           id="emailInout" 
           placeholder='Email' />
         {errors.email && <p className='form-error'>{errors.email.message}</p>}
 
-        <input {...register('text', 
-                {required: 'Type something!'})} 
+        <input 
+          {...register('text', 
+            {required: 'Type something!'})} 
           name="text" 
           id="textInput" 
           placeholder='Message...'/>
