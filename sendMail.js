@@ -1,9 +1,10 @@
 const nodemailer = require('nodemailer')
 const { google } = require('googleapis')
 const OAuth2 = google.auth.OAuth2
-require('dotenv').config()
+require('dotenv').config() 
 
-const createTransporter = async () => {
+const _createTransporter = async () => {
+  // Prepaere auth client
   const oauth2client = new OAuth2(
     process.env.CLIENT_ID,
     process.env.CLIENT_SECRET,
@@ -17,11 +18,18 @@ const createTransporter = async () => {
   const accessToken = await new Promise((resolve, reject) => {
     oauth2client.getAccessToken((err, token) => {
       if (err) {
-        reject()
+        reject(err)
       }
       resolve(token)
     })
   })
+
+  //For developement
+  //const testAccount = await nodemailer.createTestAccount()
+  //const authTest = {
+  //  user: testAccount.user,
+  //  pass: testAccount.pass
+  //}
 
   let auth = {
     type: "OAuth2",
@@ -41,32 +49,21 @@ const createTransporter = async () => {
 }
 
 const sendMail = async ( data = { name: '', email: '', text: ''} ) => {
-  
-  try {
-    //Test account
-    let testAccount = await nodemailer.createTestAccount()
-    let authTest = {
-      user: testAccount.user,
-      pass: testAccount.pass
-    }
 
-    let emailTransporter = await createTransporter()
+  const { name, email, phone} = data
+  const emailTransporter = await _createTransporter()
 
-    let status = await emailTransporter.sendMail({
-      from: `${data.name} <${data.email}>`,
-      to: "warlockultras2008@yandex.ru",
-      subject: "Test mail",
-      text: data.text
-    })
+  const status = await emailTransporter.sendMail({
+    from: `${name} <${email}>`,
+    to: "warlockultras2008@yandex.ru",
+    subject: "Test mail",
+    text: text
+  })
 
-    console.log(`Email sent: ${status.messageId}`)
-    console.log(`Preview URL: ${nodemailer.getTestMessageUrl(status)}`)
+  console.log(`Email sent: ${status.messageId}`)
+  console.log(`Preview URL: ${nodemailer.getTestMessageUrl(status)}`)
 
-    return status
-
-  } catch(err) {
-    console.log(new Error(err), 'here?')
-  }
+  return status
 }
 
 module.exports = sendMail
