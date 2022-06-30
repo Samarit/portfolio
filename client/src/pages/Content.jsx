@@ -1,7 +1,7 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import routes from '../routes'
 import { CSSTransition, SwitchTransition } from 'react-transition-group'
-import HomePage from "../pages/HomePage";
+import HomePage from "./HomePage";
 
 export default function Content() {
 

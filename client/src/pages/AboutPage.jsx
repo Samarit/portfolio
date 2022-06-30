@@ -8,7 +8,7 @@ export default function AboutPage() {
 
   return (
     <div className="page">
-      <h1>About</h1>
+      <h1 className="page-title">About</h1>
       <div className="cloud" style={{ display: isExpanded ? 'none' : 'block' }}>
         <TagCloud />
       </div>

@@ -1,6 +1,5 @@
 import AboutPage from "./pages/AboutPage"
 import ContactsPage from "./pages/ContactsPage"
-import HomePage from "./pages/HomePage"
 import SkillsPage from "./pages/SkillsPage"
 import WorksPage from "./pages/WorksPage"
 

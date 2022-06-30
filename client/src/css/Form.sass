@@ -1,3 +1,5 @@
+@use '_variables' as var
+
 $span-height: 1rem
 
 form
@@ -9,17 +11,19 @@ form
     width: 100%
     height: calc( 1.5rem + $span-height )
     background-color: black
-    border: 2px solid green
+    border: 2px solid var.$base-green
     margin-bottom: 0.25rem
-    color: lime
+    color: var.$base-green
 
     &::placeholder
       color: green
 
   .form-error
+    color: var.$warning
+
     &::before
       content: '⚠'
 
   button[type='submit']
     background-color: black
-    color: green
+    color: var.$base-green

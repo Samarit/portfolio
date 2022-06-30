@@ -3,14 +3,16 @@ import './css/App.sass'
 import './css/Pages.sass'
 import './css/Navbar.sass'
 import Navbar from "./components/Navbar"
-import Content from "./components/Content";
+import Content from "./pages/Content";
 import { useState } from 'react'
 import React from 'react'
 
+// Context for mobile navbar expand state 
 export const NavbarExpand = React.createContext()
 
 function App() {
 
+  // Mobile navbar expand state
   const [ isExpanded, setIsExpanded ] = useState(false)
 
   return (
