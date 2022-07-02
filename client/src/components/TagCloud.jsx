@@ -3,12 +3,13 @@ import { useEffect } from "react";
 import __TagCloud from "TagCloud";
 
 const tags = [
-  'loh',
-  'pidr',
-  'debik',
-  'hui',
-  'pizda',
-  'dzhigurda'
+  '29 y.o.',
+  '♥music',
+  'have beard',
+  '♥football',
+  '♥games',
+  '♥shaverma',
+  '♥math'
 ]
 
 export default function TagCloud() {

@@ -1,0 +1,25 @@
+@use '_variables' as var
+
+.page.about
+  .page-body
+    article
+      padding: 0.5rem
+      border: 1px solid var.$base-green
+      margin-bottom: 0.5rem
+
+    .cloud
+      display: flex
+      flex-direction: column
+      justify-content: center
+      min-width: 300px
+
+      h3
+        font-size: 1.25rem
+        text-align: center
+        color: var.$base-green
+
+      .tagcloud
+        margin: 0 auto
+
+      .tagcloud--item
+        color: var.$base-green

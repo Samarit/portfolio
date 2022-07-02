@@ -38,28 +38,34 @@ export default function Form() {
         
         <div className="form-header">Send me a message</div>
         
-        <input {...register('name', {required: 'This field is required'}) } name="name" id="nameInput" placeholder='Name'/>
-        {errors.name && <p className='form-error'>{errors.name.message}</p>}
+        <div className="input-wrapper">
+          <input {...register('name', {required: 'This field is required'}) } name="name" id="nameInput" placeholder='Name'/>
+          {errors.name && <p className='form-error'>{errors.name.message}</p>}
+        </div>
 
-        <input 
-          {...register('email', 
-            {required: 'This field is required',
-              pattern: {
-              value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
-              message: 'Incorrect email'
-          }})} 
-          name="email" 
-          id="emailInout" 
-          placeholder='Email' />
-        {errors.email && <p className='form-error'>{errors.email.message}</p>}
+        <div className="input-wrapper">
+          <input 
+            {...register('email', 
+              {required: 'This field is required',
+                pattern: {
+                value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+                message: 'Incorrect email'
+            }})} 
+            name="email" 
+            id="emailInout" 
+            placeholder='Email' />
+          {errors.email && <p className='form-error'>{errors.email.message}</p>}
+        </div>
 
-        <input 
-          {...register('text', 
-            {required: 'Type something!'})} 
-          name="text" 
-          id="textInput" 
-          placeholder='Message...'/>
-        {errors.text && <p className='form-error'>{errors.text.message}</p>}
+        <div className="input-wrapper">
+          <input 
+            {...register('text', 
+              {required: 'Type something!'})} 
+            name="text" 
+            id="textInput" 
+            placeholder='Message...'/>
+          {errors.text && <p className='form-error'>{errors.text.message}</p>}
+        </div>
 
         <input type="submit" value={'Send'} />
 

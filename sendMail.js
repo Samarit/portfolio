@@ -50,7 +50,7 @@ const _createTransporter = async () => {
 
 const sendMail = async ( data = { name: '', email: '', text: ''} ) => {
 
-  const { name, email, phone} = data
+  const { name, email, text} = data
   const emailTransporter = await _createTransporter()
 
   const status = await emailTransporter.sendMail({

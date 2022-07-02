@@ -1,12 +1,16 @@
+@use '_variables.sass' as var
 
 .page
   display: flex
   flex-direction: column
   justify-content: center
-  align-items: center
   width: 100%
   min-height: 100vh
   padding: 2rem
+
+.page-title
+  font-size: 2rem
+  margin-bottom: 1rem
 
 .page-enter
   opacity: 0
@@ -24,8 +28,3 @@
   opacity: 0
 
   transition: opacity 250ms ease-out
-
-.page-title
-  font-size: 2rem
-  align-self: flex-start
-  color: lime
