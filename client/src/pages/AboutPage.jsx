@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { NavbarExpand } from "../App"
 import TagCloud from "../components/TagCloud"
-import '../css/AboutPage.sass'
+import '../css/pages/AboutPage.sass'
 
 export default function AboutPage() {
 
@@ -12,6 +12,9 @@ export default function AboutPage() {
       <h1 className="page-title">About</h1>
       <div className="page-body">
         <article>
+          <h3>
+            Some text about me
+          </h3>
           Lorem ipsum dolor sit, amet consectetur adipisicing 
           elit. Vero error sapiente ad laborum quisquam 
           ducimus minima placeat modi consequatur repellat 

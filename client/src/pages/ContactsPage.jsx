@@ -1,5 +1,5 @@
 import Form from "../components/Form";
-import '../css/ContactsPage.sass'
+import '../css/pages/ContactsPage.sass'
 
 export default function ContactsPage() {
   return (

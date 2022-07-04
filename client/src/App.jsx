@@ -1,7 +1,7 @@
 import './css/_reset.sass'
 import './css/App.sass'
 import './css/Pages.sass'
-import './css/Navbar.sass'
+import './css/components/Navbar.sass'
 import Navbar from "./components/Navbar"
 import Content from "./pages/Content";
 import { useState } from 'react'

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { NavbarExpand } from "../App";
 import routes from "../routes";
+import logo from '../icons/logo.svg'
 
 export default function Navbar() {
 
@@ -13,7 +14,7 @@ export default function Navbar() {
 
         <div className="navbar-logo">
           <Link to={'/'} onClick={() => { setIsExpanded(false) }}>
-            <div id="logo"></div>
+            <img id="logo" src={logo}></img>
           </Link>
         </div>
 

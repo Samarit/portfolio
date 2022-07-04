@@ -1,4 +1,4 @@
-import '../css/Form.sass'
+import '../css/components/Form.sass'
 import { useForm } from 'react-hook-form'
 
 const formSend = async (url, options) => {
