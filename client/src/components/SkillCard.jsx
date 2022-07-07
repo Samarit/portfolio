@@ -1,16 +1,12 @@
-
+import IconSVG from "./IconSVG"
 
 export default function SkillCard( {skill} ) {
-  const { id, name, img} = skill
+  const { index, name, id} = skill
 
   return (
-    <li className="card-container" key={id}>
+    <li className="card-container" key={index}>
       <div className="card">
-
-        <div className="card-icon">
-          <img src={''} alt="Img" />
-        </div>
-
+        <IconSVG id={id} width={'30px'}/>
         <p className="card-name">{name}</p>
       </div>
 
