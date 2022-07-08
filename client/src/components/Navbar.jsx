@@ -1,8 +1,7 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
-import { NavbarExpand } from "../App";
-import routes from "../routes";
-import logo from '../icons/logo.svg'
+import { Link } from "react-router-dom"
+import { NavbarExpand } from "../App"
+import routes from "../routes"
 
 export default function Navbar() {
 
@@ -14,7 +13,7 @@ export default function Navbar() {
 
         <div className="navbar-logo">
           <Link to={'/'} onClick={() => { setIsExpanded(false) }}>
-            <img id="logo" src={logo}></img>
+            <div id="logo" style={{backgroundImage: `url(/icons/logo.svg)`}}></div>
           </Link>
         </div>
 
