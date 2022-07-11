@@ -9,7 +9,7 @@ export default function SkillsPage() {
       <h1 className="page-title">Skills</h1>
       <ul className="cards-container">
           { skills.map( (skill) => {
-            return <SkillCard skill={skill} />
+            return <SkillCard skill={skill} key={skill.index}/>
           } ) }
       </ul>
     </div>

@@ -13,7 +13,10 @@ export default function Navbar() {
 
         <div className="navbar-logo">
           <Link to={'/'} onClick={() => { setIsExpanded(false) }}>
-            <div id="logo" style={{backgroundImage: `url(/icons/logo.svg)`}}></div>
+            <div 
+              id="logo" 
+              style={{backgroundImage: `url(/icons/logo.svg)`}}>
+            </div>
           </Link>
         </div>
 

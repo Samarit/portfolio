@@ -8,7 +8,7 @@ const skills = [
   {index: 6, name: 'Webpack', id: 'webpack'},
   {index: 7, name: 'Git', id: 'git'},
   {index: 8, name: 'Postman', id: 'postman'},
-  {index: 9, name: 'RestAPI', id: 'rest'},
+  {index: 9, name: 'RestAPI', id: 'restapi'},
   {index: 10, name: 'JSON', id: 'json'}
 ] 
 
