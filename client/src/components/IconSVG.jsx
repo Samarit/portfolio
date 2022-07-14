@@ -1,9 +1,5 @@
 // Icon from sprites with id
-export default function IconSVG( {id, ...rest} ) {
-
-  const {width, height} = rest
-  console.log(width, height)
-
+export default function IconSVG( {id} ) {
   return (
     <div 
       className="icon" 

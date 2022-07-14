@@ -1,7 +1,9 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom"
 import { NavbarExpand } from "../App"
+import contacts from "../contacts";
 import routes from "../routes"
+import ContactLink from "./ContactLink"
 
 export default function Navbar() {
 
@@ -46,6 +48,12 @@ export default function Navbar() {
           ))}
 
         </ul>
+
+        <div className="contact-links">
+
+            {contacts.map( (contact) => <ContactLink id={contact.id} url={contact.url} /> )}
+
+        </div>
 
       </nav>
     </div>

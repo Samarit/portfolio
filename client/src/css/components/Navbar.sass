@@ -23,54 +23,68 @@ $logo-height: 3rem
   height: 4rem
   z-index: 100
 
-.navbar-logo
-  width: $logo-width
-  height: $logo-height
-  //margin-bottom: 5rem
-
-  #logo
+  .navbar-logo
     width: $logo-width
     height: $logo-height
-    background-position: center
-    background-size: contain
+    //margin-bottom: 5rem
 
-.navbar-toggle
-  position: absolute
-  top: 1rem
-  right: 1rem
-  margin-left: auto
+    #logo
+      width: $logo-width
+      height: $logo-height
+      background-position: center
+      background-size: contain
 
-.navbar-menu
-  display: none
-  flex-direction: column
-  justify-content: center
-  width: calc( 100% - 2rem )
+  .navbar-toggle
+    position: absolute
+    top: 1rem
+    right: 1rem
+    margin-left: auto
 
-  li
-    display: flex
+  .navbar-menu
+    display: none
+    flex-direction: column
     justify-content: center
-    height: 3rem
-    transition: 0.5s ease-out
+    width: calc( 100% - 2rem )
 
-    &:hover
-      background-color: #0c810c
+    li
+      display: flex
+      justify-content: center
+      height: 3rem
+      transition: 0.5s ease-out
 
-    &:not(:last-child)
-      border-bottom: 1px solid gray
+      &:hover
+        background-color: #0c810c
 
-  a
-    text-align: center
-    line-height: 3
-    color: white
-    text-decoration: none
+      &:not(:last-child)
+        border-bottom: 1px solid gray
+
+    a
+      text-align: center
+      line-height: 3
+      color: white
+      text-decoration: none
+
+  .contact-links
+    display: none
+
+    a
+      padding: 1rem 0.5rem
+
+    .icon
+      width: 1.5rem
+      height: 1.5rem
 
 .navbar.expanded
+  justify-content: space-around
   align-items: center
   height: 100vh
   width: 100%
   background-color: rgb(52,62,64)
 
   .navbar-menu
+    display: flex
+
+  .contact-links
     display: flex
 
 #hamburger
