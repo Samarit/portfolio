@@ -51,7 +51,7 @@ export default function Navbar() {
 
         <div className="contact-links">
 
-            {contacts.map( (contact) => <ContactLink id={contact.id} url={contact.url} /> )}
+            {contacts.map( (contact) => <ContactLink id={contact.id} url={contact.url} key={contact.index} /> )}
 
         </div>
 

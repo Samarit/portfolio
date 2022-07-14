@@ -4,7 +4,6 @@ import contacts from '../contacts.js'
 import ContactLink from "../components/ContactLink";
 
 export default function ContactsPage() {
-  console.log(contacts);
 
   return (
     <div className="page contacts">
