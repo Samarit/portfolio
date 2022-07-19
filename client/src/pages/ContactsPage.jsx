@@ -1,7 +1,7 @@
 import Form from "../components/Form";
 import '../css/pages/ContactsPage.sass'
 import contacts from '../contacts.js'
-import ContactLink from "../components/ContactLink";
+import IconLink from "../components/IconLink";
 
 export default function ContactsPage() {
 
@@ -13,7 +13,7 @@ export default function ContactsPage() {
 
         {contacts.map( (contact) => (
           <li key={contact.index} >
-            <ContactLink id={contact.id} url={contact.url} />
+            <IconLink id={contact.id} url={contact.url} />
           </li>
         ))}
 

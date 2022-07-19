@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import { NavbarExpand } from "../App"
 import contacts from "../contacts";
 import routes from "../routes"
-import ContactLink from "./ContactLink"
+import IconLink from "./IconLink"
 
 export default function Navbar() {
 
@@ -51,7 +51,7 @@ export default function Navbar() {
 
         <div className="contact-links">
 
-            {contacts.map( (contact) => <ContactLink id={contact.id} url={contact.url} key={contact.index} /> )}
+            {contacts.map( (contact) => <IconLink id={contact.id} url={contact.url} key={contact.index} /> )}
 
         </div>
 
