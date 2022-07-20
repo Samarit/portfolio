@@ -7,7 +7,10 @@ const _iconOnCLick = (e) => {
 export default function WorkCard( {id, url, urlGit} ) {
   return (
     <li className="card work" id={id} >
-      <IconLink id={'github'} url={urlGit} onClick={_iconOnCLick}/>
+      <div className="work-links">
+        <IconLink id={'github'} url={urlGit} onClick={_iconOnCLick}/>
+        <IconLink id={'external'} url={url} onClick={_iconOnCLick}/>
+      </div>  
     </li>
   )
 }

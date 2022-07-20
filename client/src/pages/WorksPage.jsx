@@ -8,7 +8,7 @@ export default function WorksPage() {
 
       <ul className="works-container">
         <WorkCard id={'2x2club'} urlGit={'github.com/Samarit/2x2club-speedreading'} />
-        <WorkCard id={'charty'} urlGit={'github.com/Samarit/chart-project'} />
+        <WorkCard id={'charty'} urlGit={'github.com/Samarit/chart-project'} url={'radiant-woodland-88467.herokuapp.com/'}/>
       </ul>
     </div>
   )

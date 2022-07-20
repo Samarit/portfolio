@@ -1,6 +1,6 @@
 import Form from "../components/Form";
 import '../css/pages/ContactsPage.sass'
-import contacts from '../contacts.js'
+import contacts from '../collections/contacts.js'
 import IconLink from "../components/IconLink";
 
 export default function ContactsPage() {

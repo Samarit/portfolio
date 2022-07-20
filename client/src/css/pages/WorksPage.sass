@@ -3,10 +3,15 @@
     display: flex
 
     .work
+      display: flex
+      align-items: flex-end
       width: 5rem
       height: 8rem
       list-style: none
       border: 1px solid silver
+
+      .work-links
+        display: flex
 
       a
         display: block
@@ -17,3 +22,6 @@
           width: 1.5rem
           height: 1.5rem
           border-radius: 50%
+
+          &#external
+            border-radius: 0
