@@ -1,4 +1,4 @@
-import skills from '../collections/skills'
+import skills from '../data/skills'
 import SkillCard from '../components/SkillCard'
 import '../css/pages/SkillsPage.sass'
 

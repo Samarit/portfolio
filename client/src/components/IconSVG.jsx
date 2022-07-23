@@ -2,8 +2,7 @@
 export default function IconSVG( {id} ) {
   return (
     <div 
-      className="icon" 
-      id={id} 
+      className={`icon ${id}`}
       style={{
         backgroundImage: `url(/icons/${id}.svg)`}}>
     </div>

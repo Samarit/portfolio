@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom"
 import { NavbarExpand } from "../App"
-import contacts from "../collections/contacts";
+import contacts from "../data/contacts";
 import routes from "../routes"
 import IconLink from "./IconLink"
 
