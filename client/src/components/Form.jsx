@@ -1,5 +1,6 @@
 import '../css/components/Form.sass'
 import { useForm } from 'react-hook-form'
+import FormInput from './FormInput'
 
 const formSend = async (url, options) => {
   const res = await fetch( url, {
@@ -38,34 +39,13 @@ export default function Form() {
         
         <div className="form-header">Send me a message</div>
         
-        <div className="input-wrapper">
-          <input {...register('name', {required: 'This field is required'}) } name="name" id="nameInput" placeholder='Name'/>
-          {errors.name && <p className='form-error'>{errors.name.message}</p>}
-        </div>
+        <FormInput name='name' id='nameInput' register={register} errors={errors} />
 
-        <div className="input-wrapper">
-          <input 
-            {...register('email', 
-              {required: 'This field is required',
-                pattern: {
-                value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
-                message: 'Incorrect email'
-            }})} 
-            name="email" 
-            id="emailInout" 
-            placeholder='Email' />
-          {errors.email && <p className='form-error'>{errors.email.message}</p>}
-        </div>
+        <FormInput name='email' id='emailInput' register={register} errors={errors} />
 
-        <div className="input-wrapper">
-          <input 
-            {...register('text', 
-              {required: 'Type something!'})} 
-            name="text" 
-            id="textInput" 
-            placeholder='Message...'/>
-          {errors.text && <p className='form-error'>{errors.text.message}</p>}
-        </div>
+        <FormInput name='message' id='messageInput' register={register} errors={errors} />
+
+        
 
         <input type="submit" value={'Send'} />
 
