@@ -27,6 +27,7 @@
   "homepage": "https://github.com/Samarit/portfolio#readme",
   "dependencies": {
     "-": "^0.0.1",
+    "axios": "^0.27.2",
     "concurrently": "^7.1.0",
     "create-react-app": "^1.2.1",
     "express": "^4.17.3",

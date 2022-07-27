@@ -1,17 +1,15 @@
 import '../css/components/Form.sass'
 import { useForm } from 'react-hook-form'
 import FormInput from './FormInput'
+import axios from 'axios'
 
 const formSend = async (url, options) => {
-  const res = await fetch( url, {
+  const res = await axios({
     method: options.method, 
-    body: JSON.stringify(options.body),
-    headers: {
-      'Content-Type': 'application/json;charset=utf-8' 
-    }
+    url: url,
+    data: options.data
   })
-  const respond = await res.json()
-  console.log(respond)
+  console.log(res)
 }
 
 
@@ -27,6 +25,7 @@ export default function Form() {
   const onSubmit = (data) => {
     console.log(data)
     console.log(`Errors: ${errors}`)
+
     formSend( '/api/sendmail', {
       method: 'POST',
       body: data
