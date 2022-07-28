@@ -1,7 +1,5 @@
 export default function FormInput( {id, name, register, errors} ) {
 
-  console.log(id, name, register)
-
   return (
     <div className="input-wrapper">
 
