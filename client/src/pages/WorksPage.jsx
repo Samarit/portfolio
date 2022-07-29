@@ -1,14 +1,9 @@
 import '../css/pages/WorksPage.sass'
-import WorkCard from "../components/WorkCard";
+import WorkCard from "../components/WorkCard"
 
-const test = {
-  title: 'Клуб говна',
-  text: 'Который мы вроде сделали' 
- }
-
-export default function WorksPage() {
+export default function WorksPage( {id} ) {
   return (
-    <div className="page works">
+    <div className="page works" id={id}>
 
       <h1 className="page-title">Works</h1>
 

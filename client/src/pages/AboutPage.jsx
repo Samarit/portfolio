@@ -3,12 +3,12 @@ import { NavbarExpand } from "../App"
 import TagCloud from "../components/TagCloud"
 import '../css/pages/AboutPage.sass'
 
-export default function AboutPage() {
+export default function AboutPage( {id} ) {
 
   const [isExpanded] = useContext(NavbarExpand)
 
   return (
-    <div className="page about">
+    <div className="page about" id={id}>
       <h1 className="page-title">About</h1>
       <div className="page-body">
         <article>
