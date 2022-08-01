@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom"
 import { NavbarExpand } from "../App"
 import contacts from "../data/contacts";
-import routes from "../routes"
+import pages from "../pages"
 import IconLink from "./IconLink"
 
 export default function Navbar() {
@@ -41,9 +41,9 @@ export default function Navbar() {
 
         <ul className="navbar-menu">
 
-          {routes.map( ({path, name}) => (
-            <li key={name} onClick={() => { setIsExpanded(false)} }>
-              <Link to={path}>{name}</Link>
+          {pages.map( ({id, name}, i) => (
+            <li key={i} onClick={() => { setIsExpanded(false)} }>
+             <a href={`#${id}`}>{name}</a>
             </li>
           ))}
 

@@ -3,10 +3,10 @@ import '../css/pages/ContactsPage.sass'
 import contacts from '../data/contacts.js'
 import IconLink from "../components/IconLink";
 
-export default function ContactsPage() {
+export default function ContactsPage( {id} ) {
 
   return (
-    <div className="page contacts">
+    <div className={`page ${id}`} id={id}>
       <h1 className="page-title">Contacts</h1>
 
       <ul className="contact-links-container">

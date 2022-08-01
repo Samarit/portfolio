@@ -1,4 +1,5 @@
 @use '../_variables' as var
+@import 'FormInput.sass'
 
 $span-height: 1rem
 
@@ -6,28 +7,6 @@ form
   display: flex
   flex-direction: column
   background-color: black
-
-  .input-wrapper
-    margin-bottom: 0.3rem
-
-  input
-    width: 100%
-    height: calc( 1.5rem + $span-height )
-    background-color: black
-    border: 2px solid var.$base-green
-    color: var.$base-green
-
-    &::placeholder
-      color: green
-
-    &:autofill
-      background-color: var.$base-green !important
-
-  .form-error
-    color: var.$warning
-
-    &::before
-      content: '⚠'
 
   button[type='submit']
     background-color: black

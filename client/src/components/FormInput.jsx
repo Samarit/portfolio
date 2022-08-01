@@ -8,7 +8,7 @@ export default function FormInput( {id, name, register, errors} ) {
         id={id} 
         placeholder={name}/>
 
-      {errors[name] && <p className='form-error'>{errors[name].message}</p>}
+      {errors[name] && <p className='input-error'>{errors[name].message}</p>}
     </div>
   )
 }

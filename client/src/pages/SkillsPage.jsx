@@ -3,9 +3,9 @@ import SkillCard from '../components/SkillCard'
 import '../css/pages/SkillsPage.sass'
 
 
-export default function SkillsPage() {
+export default function SkillsPage( {id} ) {
   return (
-    <div className="page skills">
+    <div className="page skills" id={id}>
       <h1 className="page-title">Skills</h1>
 
       <div className='skills-container hardskills' >
