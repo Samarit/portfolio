@@ -1,0 +1,25 @@
+@use '../_variables.sass' as var
+
+$span-height: 1rem
+
+.input-wrapper
+  margin-bottom: 0.3rem
+
+input
+  width: 100%
+  height: calc( 1.5rem + $span-height )
+  background-color: black
+  border: 2px solid var.$base-green
+  color: var.$base-green
+
+  &::placeholder
+    color: green
+
+    &:autofill
+      background-color: var.$base-green !important
+
+.input-error
+  color: var.$warning
+
+  &::before
+    content: '⚠'

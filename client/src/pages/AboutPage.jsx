@@ -8,8 +8,9 @@ export default function AboutPage( {id} ) {
   const [isExpanded] = useContext(NavbarExpand)
 
   return (
-    <div className="page about" id={id}>
+    <div className={`page ${id}`} id={id}>
       <h1 className="page-title">About</h1>
+      
       <div className="page-body">
         <article>
           <h3>

@@ -4,13 +4,15 @@ const _iconOnCLick = (e) => {
   e.stopPropagation()
 }
 
-export default function WorkCard( {id, url, urlGit, children} ) {
+export default function WorkCard( {work} ) {
+
+  const { id, title, text, url, urlGit} = work
 
   return (
     <li className="card work" id={id} >
       
-      { <p>{children.title}</p> }
-      { <span>{children.text}</span> }
+      { <p>{title}</p> }
+      { <span>{text}</span> }
 
       <div className="work-links">
         <IconLink id={'github'} url={urlGit} onClick={_iconOnCLick}/>
