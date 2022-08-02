@@ -4,10 +4,10 @@ import SkillsPage from "./pages/SkillsPage"
 import WorksPage from "./pages/WorksPage"
 
 const pages = [
-  { id: 'about', name: 'About', Component: AboutPage },
-  { id: 'skills', name: 'Skills', Component: SkillsPage },
-  { id: 'works', name: 'Works', Component: WorksPage },
-  { id: 'contacts', name: 'Contacts', Component: ContactsPage }
+  { id: 'about', Component: AboutPage },
+  { id: 'skills', Component: SkillsPage },
+  { id: 'works', Component: WorksPage },
+  { id: 'contacts', Component: ContactsPage }
 ]
 
 export default pages

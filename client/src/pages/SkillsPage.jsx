@@ -1,13 +1,13 @@
 import skills from '../data/skills'
 import SkillCard from '../components/SkillCard'
 import '../css/pages/SkillsPage.sass'
+import Page from '../components/Page'
 
 
 export default function SkillsPage( {id} ) {
   return (
-    <div className="page skills" id={id}>
-      <h1 className="page-title">Skills</h1>
-
+    <Page id={id}>
+      
       <div className='skills-container hardskills' >
         <h3 className='skills-title'>Hard skills</h3>
         <ul className="cards-container">
@@ -22,6 +22,7 @@ export default function SkillsPage( {id} ) {
       <div className='skills-container softskills'>
         <h3 className='skills-title'>Soft skills</h3>
       </div>
-    </div>
+
+    </Page>
   )
 }

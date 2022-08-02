@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { NavbarExpand } from "../App"
+import Page from "../components/Page"
 import TagCloud from "../components/TagCloud"
 import '../css/pages/AboutPage.sass'
 
@@ -8,9 +9,7 @@ export default function AboutPage( {id} ) {
   const [isExpanded] = useContext(NavbarExpand)
 
   return (
-    <div className={`page ${id}`} id={id}>
-      <h1 className="page-title">About</h1>
-      
+    <Page id={id}>
       <div className="page-body">
         <article>
           <h3>
@@ -28,6 +27,6 @@ export default function AboutPage( {id} ) {
           <TagCloud />
         </div>
       </div>
-    </div>
+    </Page>
   )
 }
